@@ -1,14 +1,3 @@
-cmake_minimum_required(VERSION 3.5)
-
-project(simpleWidget VERSION 0.1 LANGUAGES CXX)
-
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 set(PROJECT_SOURCES
         main.cpp
 )
@@ -37,7 +26,7 @@ else()
 endif()
 
 target_link_libraries(simpleWidget PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-target_link_libraries(simpleWidget PUBLIC sfml-window sfml-graphics)
+#target_link_libraries(simpleWidget PUBLIC sfml-window sfml-graphics)
 
 set_target_properties(simpleWidget PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
