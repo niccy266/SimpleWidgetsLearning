@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find SFML shared libraries
-find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
+# find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
@@ -42,7 +42,7 @@ else()
 endif()
 
 target_link_libraries(widgetsTest PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-target_link_libraries(widgetsTest PUBLIC sfml-window sfml-graphics)
+#target_link_libraries(widgetsTest PUBLIC sfml-window sfml-graphics)
 
 set_target_properties(widgetsTest PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
