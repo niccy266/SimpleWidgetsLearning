@@ -5,11 +5,11 @@ Window::Window(QWidget *parent)
 {
     setFixedSize(100, 50);
 
-    QPushButton *button = new QPushButton("Hello", this);
+    m_button = new QPushButton("Hello", this);
 
-    button->setToolTip("A tooltip");
-    button->setGeometry(10, 10, 80, 30);
+    m_button->setToolTip("A tooltip");
+    m_button->setGeometry(10, 10, 80, 30);
 
-    QFont font("Courier");
-    button->setFont(font);
+    QFont font("Ariel");
+    m_button->setFont(font);
 }
