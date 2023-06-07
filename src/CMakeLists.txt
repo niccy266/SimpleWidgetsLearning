@@ -30,11 +30,11 @@ endif()
 target_link_libraries(simpleWidget PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 #target_link_libraries(simpleWidget PUBLIC sfml-window sfml-graphics)
 
-target_compile_features(CMakeSFMLProject PRIVATE cxx_std_17)
-if (WIN32 AND BUILD_SHARED_LIBS)
-    add_custom_command(TARGET CMakeSFMLProject POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_RUNTIME_DLLS:CMakeSFMLProject> $<TARGET_FILE_DIR:CMakeSFMLProject> COMMAND_EXPAND_LISTS)
-endif()
+#target_compile_features(simpleWidget PRIVATE cxx_std_17)
+#if (WIN32 AND BUILD_SHARED_LIBS)
+#    add_custom_command(TARGET CMakeSFMLProject POST_BUILD
+#        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_RUNTIME_DLLS:CMakeSFMLProject> $<TARGET_FILE_DIR:CMakeSFMLProject> COMMAND_EXPAND_LISTS)
+#endif()
 
 set_target_properties(simpleWidget PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
